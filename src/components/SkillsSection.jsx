@@ -32,6 +32,11 @@ const skillCategories = [
         level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
       },
+      {
+        name: "Django",
+        level: 80,
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+      },
     ],
   },
   {
