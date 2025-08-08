@@ -130,17 +130,6 @@ export const SkillsSection = () => {
                     />
                     <h4 className="font-semibold text-lg">{skill.name}</h4>
                   </div>
-
-                  {/* Progress Bar */}
-                  <div className="relative w-full bg-secondary/50 h-4 rounded-full overflow-hidden">
-                    <div
-                      className="h-4 bg-primary rounded-full transition-all duration-700 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                    <span className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-medium text-white drop-shadow">
-                      {skill.level}%
-                    </span>
-                  </div>
                 </div>
               ))}
             </div>
