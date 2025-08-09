@@ -65,63 +65,28 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Developer</span>{" "}
-            PortFolio
-          </span>
-        </a>
+    <>
+      <nav
+        className={cn(
+          "fixed w-full z-40 transition-all duration-300",
+          isScrolled
+            ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
+            : "py-5"
+        )}
+      >
+        <div className="container flex items-center justify-between">
+          <a
+            className="text-xl font-bold text-primary flex items-center"
+            href="#hero"
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground">Developer</span>{" "}
+              PortFolio
+            </span>
+          </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item, key) => {
-            const isActive = activeSection === item.href.slice(1);
-            return (
-              <a
-                href={item.href}
-                key={key}
-                className={cn(
-                  "transition-colors duration-300",
-                  isActive
-                    ? "text-primary font-semibold"
-                    : "text-foreground/80 hover:text-primary"
-                )}
-              >
-                {item.name}
-              </a>
-            );
-          })}
-          <ThemeToggle className="ml-4" />
-        </div>
-
-        {/* mobile nav */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col items-center space-y-8 text-xl mt-8">
+          {/* desktop nav */}
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, key) => {
               const isActive = activeSection === item.href.slice(1);
               return (
@@ -134,16 +99,60 @@ export const Navbar = () => {
                       ? "text-primary font-semibold"
                       : "text-foreground/80 hover:text-primary"
                   )}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               );
             })}
-            <ThemeToggle />
+            <ThemeToggle className="ml-4" />
+          </div>
+
+          {/* mobile nav */}
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="md:hidden p-2 text-foreground z-50"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-[100] md:hidden">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-background/95 backdrop-blur-xl"
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          {/* Menu content */}
+          <div className="relative h-full flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center space-y-8 text-xl">
+              {navItems.map((item, key) => {
+                const isActive = activeSection === item.href.slice(1);
+                return (
+                  <a
+                    href={item.href}
+                    key={key}
+                    className={cn(
+                      "transition-colors duration-300",
+                      isActive
+                        ? "text-primary font-semibold"
+                        : "text-foreground/80 hover:text-primary"
+                    )}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                );
+              })}
+              <ThemeToggle />
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 };
