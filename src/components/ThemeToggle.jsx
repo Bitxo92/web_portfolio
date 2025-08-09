@@ -30,7 +30,7 @@ export const ThemeToggle = () => {
       onClick={toogleTheme}
       className={cn(
         "  p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden"
+        "focus:outline-hidden hover:cursor-pointer"
       )}
     >
       {isDarkMode ? (
