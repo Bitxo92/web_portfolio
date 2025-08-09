@@ -11,12 +11,16 @@ export const AboutMe = () => {
           <div className="space-y-6">
             <h3>Passionate Mobile & Web developer</h3>
             <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I’m a full stack developer with a deep passion for crafting
+              high-quality web and mobile applications. With expertise in both
+              front-end and back-end technologies, I bring ideas to life with
+              clean, efficient, and scalable code.
             </p>
             <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I thrive on solving complex problems and delivering seamless user
+              experiences through intuitive design and robust functionality. My
+              goal is to build digital products that make an impact and help
+              businesses grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
@@ -38,9 +42,16 @@ export const AboutMe = () => {
                   <Code className="h-6 w-6 text-primary"></Code>
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    Web & Mobile App Development
+                  </h4>
                   <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit amet
+                    I specialize in building responsive, high-performance web
+                    and mobile applications using modern technologies like React
+                    and Django for the web, and Flutter for cross-platform
+                    mobile apps. Whether it’s a sleek single-page website or a
+                    full-featured mobile app, I deliver scalable solutions
+                    tailored to your needs.
                   </p>
                 </div>
               </div>
@@ -53,7 +64,10 @@ export const AboutMe = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">UI/UX Design</h4>
                   <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit amet
+                    Creating user-centered designs is key to my development
+                    process. I focus on intuitive interfaces, accessibility, and
+                    smooth interactions that ensure users enjoy every step of
+                    their journey across web and mobile apps.
                   </p>
                 </div>
               </div>
@@ -66,7 +80,11 @@ export const AboutMe = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit amet
+                    With experience managing projects from conception to
+                    deployment, I ensure deadlines are met and teams collaborate
+                    efficiently. I prioritize clear communication, agile
+                    methodologies, and quality assurance to guarantee successful
+                    outcomes.
                   </p>
                 </div>
               </div>
