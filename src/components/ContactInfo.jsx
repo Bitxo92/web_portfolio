@@ -25,10 +25,22 @@ export const ContactInfo = () => {
 
       {/* Description text */}
       <p className="max-w-xl text-center text-lg">
-        Feel free to reach out via <span className="text-primary">email</span>{" "}
-        or connect with me on <span className="text-primary">Linkedin</span> and{" "}
-        <span className="text-primary">GitHub</span> . I'd love to hear from
-        you!
+        Feel free to reach out via{" "}
+        <a href="mailto:alexpatino1992@gmail.com">
+          <span className="text-primary">email</span>{" "}
+        </a>
+        or connect with me on{" "}
+        <a
+          href="https://www.linkedin.com/in/alejandro-m-pati%C3%B1o-garcia-41b000309/"
+          target="_blank"
+        >
+          <span className="text-primary">Linkedin</span>
+        </a>{" "}
+        and{" "}
+        <a href="https://github.com/Bitxo92" target="_blank">
+          <span className="text-primary">GitHub</span>
+        </a>{" "}
+        . I'd love to hear from you!
       </p>
 
       {/* Lottie Animation */}
