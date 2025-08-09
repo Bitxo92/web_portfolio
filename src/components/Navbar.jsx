@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { X, Menu } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   {
@@ -82,7 +83,7 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item, key) => {
             const isActive = activeSection === item.href.slice(1);
             return (
@@ -100,6 +101,7 @@ export const Navbar = () => {
               </a>
             );
           })}
+          <ThemeToggle className="ml-4" />
         </div>
 
         {/* mobile nav */}
@@ -119,7 +121,7 @@ export const Navbar = () => {
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col items-center space-y-8 text-xl mt-8">
             {navItems.map((item, key) => {
               const isActive = activeSection === item.href.slice(1);
               return (
@@ -138,6 +140,7 @@ export const Navbar = () => {
                 </a>
               );
             })}
+            <ThemeToggle />
           </div>
         </div>
       </div>
