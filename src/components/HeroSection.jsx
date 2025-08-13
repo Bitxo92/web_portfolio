@@ -10,7 +10,7 @@ export const HeroSection = () => {
       id="hero"
       className="relative h-screen flex flex-col justify-center px-4 py-16 sm:py-24"
     >
-      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 z-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 z-10">
         {/* Text Content */}
         <div className="max-w-2xl w-full text-center lg:text-left space-y-4 lg:space-y-6 mt-8 lg:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
