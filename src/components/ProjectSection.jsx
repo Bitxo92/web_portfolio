@@ -13,7 +13,7 @@ const projects = [
     id: 1,
     title: "DogWalkz",
     description: "",
-    image: "/projects/DogWalkz_Banner.png",
+    image: "/projects/DogWalkz_Banner.svg",
     tags: ["Flutter", "Dart", "Supabase", "Firebase", "Stripe"],
     githubUrl: "https://github.com/Bitxo92/DogWalkz",
   },
@@ -53,7 +53,7 @@ export const ProjectSection = () => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-48 sm:h-56 md:h-64 overflow-hidden relative"
+                className="block aspect-[16/9] overflow-hidden relative"
               >
                 <img
                   src={project.image}
