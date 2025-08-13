@@ -8,7 +8,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex flex-col justify-center px-4 py-16 sm:py-24"
+      className="relative h-screen flex flex-col justify-center px-4 py-16 sm:py-24"
     >
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12 z-10">
         {/* Text Content */}
@@ -44,7 +44,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Animation Container */}
-        <div className="w-full lg:w-1/2 max-w-[260px] sm:max-w-[320px] lg:max-w-[500px] mx-auto">
+        <div className="w-full lg:w-1/2 max-w-[400px] lg:max-w-[500px] mx-auto">
           <Lottie
             animationData={null}
             path={animationURL}
@@ -55,14 +55,12 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Updated Scroll Down Indicator */}
-      <div className="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce pointer-events-none z-20">
-        <div className="bg-background/80 backdrop-blur-sm rounded-full p-2">
-          <span className="text-xs sm:text-sm text-muted-foreground mb-1 block">
-            Scroll Down
-          </span>
-          <ArrowDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary mx-auto" />
-        </div>
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <span className="text-xs sm:text-sm text-muted-foreground mb-2">
+          Scroll Down
+        </span>
+        <ArrowDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
       </div>
     </section>
   );
