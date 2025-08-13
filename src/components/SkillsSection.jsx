@@ -110,7 +110,7 @@ export const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-12 sm:py-16 md:py-24 px-4 relative bg-secondary/30"
+      className="scroll-mt-16 py-12 sm:py-16 md:py-24 px-4 relative bg-secondary/30"
     >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">

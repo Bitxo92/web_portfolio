@@ -21,7 +21,10 @@ const projects = [
 
 export const ProjectSection = () => {
   return (
-    <section id="projects" className="py-12 sm:py-16 md:py-24 px-4 relative">
+    <section
+      id="projects"
+      className="scroll-mt-16 py-12 sm:py-16 md:py-24 px-4 relative"
+    >
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center">
           Featured <span className="text-primary">Projects</span>
