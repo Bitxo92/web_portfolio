@@ -108,38 +108,46 @@ const skillCategories = [
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <section
+      id="skills"
+      className="py-12 sm:py-16 md:py-24 px-4 relative bg-secondary/30"
+    >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
           My <span className="text-primary">Skills</span>
         </h2>
 
-        {skillCategories.map((category, idx) => (
-          <div key={idx} className="mb-12">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-primary/40 pb-2">
-              {category.title}
-            </h3>
+        <div className="space-y-8 sm:space-y-12">
+          {skillCategories.map((category, idx) => (
+            <div key={idx}>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 border-b border-primary/40 pb-2">
+                {category.title}
+              </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.skills.map((skill, key) => (
-                <div
-                  key={key}
-                  className="bg-card p-6 rounded-lg shadow-xs card-hover"
-                >
-                  {/* Skill Name + Logo */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <img
-                      src={skill.logo}
-                      alt={skill.name}
-                      className="w-6 h-6"
-                    />
-                    <h4 className="font-semibold text-lg">{skill.name}</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {category.skills.map((skill, key) => (
+                  <div
+                    key={key}
+                    className="bg-card p-4 sm:p-6 rounded-lg shadow-xs card-hover transition-transform duration-300 hover:scale-105"
+                  >
+                    {/* Skill Name + Logo */}
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <img
+                        src={skill.logo}
+                        alt={skill.name}
+                        className="w-5 h-5 sm:w-6 sm:h-6"
+                        loading="lazy"
+                      />
+                      <h4 className="font-semibold text-base sm:text-lg">
+                        {skill.name}
+                      </h4>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
