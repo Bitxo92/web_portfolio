@@ -20,7 +20,7 @@ export const Home = () => {
         <SkillsSection></SkillsSection>
         <ProjectSection></ProjectSection>
         <ContactInfo></ContactInfo>
-        <div className="h-100"></div>
+        <div className="h-80"></div>
       </main>
     </div>
   );
