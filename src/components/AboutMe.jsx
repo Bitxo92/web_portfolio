@@ -33,7 +33,7 @@ export const AboutMe = () => {
               <a
                 href="/CV_Programador_AlejandroPatinoGarcia.pdf"
                 target="_blank"
-                className="px-4 md:px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center text-sm md:text-base w-full sm:w-auto"
+                className="px-4 md:px-6 py-2 rounded-md border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center text-sm md:text-base w-full sm:w-auto"
               >
                 Download CV
               </a>
