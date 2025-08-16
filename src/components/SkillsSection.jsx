@@ -138,7 +138,7 @@ export const SkillsSection = () => {
                         className="w-5 h-5 sm:w-6 sm:h-6"
                         loading="lazy"
                       />
-                      <h4 className="font-semibold text-base sm:text-lg">
+                      <h4 className="font-semibold text-base sm:text-lg font-[VT323]">
                         {skill.name}
                       </h4>
                     </div>

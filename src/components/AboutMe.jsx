@@ -11,13 +11,13 @@ export const AboutMe = () => {
             <h3 className="text-xl md:text-2xl font-semibold">
               Passionate Mobile & Web developer
             </h3>
-            <p className="text-sm md:text-base text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
               I’m a full stack developer with a deep passion for crafting
               high-quality web and mobile applications. With expertise in both
               front-end and back-end technologies, I bring ideas to life with
               clean, efficient, and scalable code.
             </p>
-            <p className="text-sm md:text-base text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
               I thrive on solving complex problems and delivering seamless user
               experiences through intuitive design and robust functionality. My
               goal is to build digital products that make an impact and help
@@ -50,7 +50,7 @@ export const AboutMe = () => {
                   <h4 className="font-semibold text-base md:text-lg mb-2">
                     Web & Mobile App Development
                   </h4>
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
                     I specialize in building responsive, high-performance web
                     and mobile applications using modern technologies like React
                     and Django for the web, and Flutter for cross-platform
@@ -71,7 +71,7 @@ export const AboutMe = () => {
                   <h4 className="font-semibold text-base md:text-lg mb-2">
                     UI/UX Design
                   </h4>
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
                     Creating user-centered designs is key to my development
                     process. I focus on intuitive interfaces, accessibility, and
                     smooth interactions that ensure users enjoy every step of
@@ -90,7 +90,7 @@ export const AboutMe = () => {
                   <h4 className="font-semibold text-base md:text-lg mb-2">
                     Project Management
                   </h4>
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
                     With experience managing projects from conception to
                     deployment, I ensure deadlines are met and teams collaborate
                     efficiently. I prioritize clear communication, agile

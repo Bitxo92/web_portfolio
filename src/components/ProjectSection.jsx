@@ -29,7 +29,7 @@ export const ProjectSection = () => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center">
           Featured <span className="text-primary">Projects</span>
         </h2>
-        <p className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4">
+        <p className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4 font-[VT323]">
           Welcome to my projects showcase, where creativity meets functionality.
           Here you'll find a curated selection of my work, highlighting my
           skills. Each project reflects my commitment to quality, attention to

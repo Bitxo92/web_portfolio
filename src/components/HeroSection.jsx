@@ -47,10 +47,10 @@ export const HeroSection = () => {
             </span>{" "}
             <br />
             <span className="inline-flex flex-wrap">
-              <span className="text-primary opacity-0 animate-fade-in-delay-1 inline-block">
+              <span className="text-primary opacity-0 animate-fade-in-delay-1 inline-block font-[VT323]">
                 Alejandro
               </span>
-              <span className="text-gradient opacity-0 animate-fade-in-delay-2 inline-block ml-2 ">
+              <span className="text-gradient opacity-0 animate-fade-in-delay-2 inline-block ml-2 font-[VT323] ">
                 Patiño
               </span>
             </span>
@@ -84,7 +84,7 @@ export const HeroSection = () => {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-xs sm:text-sm text-muted-foreground mb-2">
+        <span className="text-xs sm:text-sm text-muted-foreground mb-2 font-[VT323]">
           Scroll Down
         </span>
         <ArrowDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />

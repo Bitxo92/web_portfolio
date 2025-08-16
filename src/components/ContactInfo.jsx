@@ -24,7 +24,7 @@ export const ContactInfo = () => {
       </h2>
 
       {/* Description text */}
-      <p className="max-w-xl text-center text-base sm:text-lg leading-relaxed">
+      <p className="max-w-xl text-center text-base sm:text-lg leading-relaxed font-[VT323]">
         Feel free to reach out via{" "}
         <a href="mailto:alexpatino1992@gmail.com">
           <span className="text-primary">email</span>{" "}
