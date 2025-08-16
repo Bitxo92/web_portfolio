@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap");
 @import "tailwindcss";
 
 /* ✅ ONLY custom props and keyframes stay in @theme */
@@ -36,6 +37,7 @@
       transform: translateX(-4px);
     }
   }
+
   @keyframes float {
     0%,
     100% {
@@ -179,6 +181,19 @@
 
   .cosmic-button {
     @apply px-6 py-2 rounded-md bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95;
+  }
+  .typed-cursor {
+    font-family: "VT323", monospace;
+    font-size: 150%;
+    font-weight: bold;
+    color: #6366f1;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
   }
 
   .star {
