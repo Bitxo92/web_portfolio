@@ -1,12 +1,92 @@
-# React + Vite
+# Dev Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean design, smooth animations, and interactive components.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/Built_with-React-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Built_with-Vite-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Styled_with-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)
+![Lucide React](https://img.shields.io/badge/Icons-Lucide_React-0A0A0A?logo=lucide&logoColor=white)
+![Lottie](https://img.shields.io/badge/Animations-Lottie-00DDB3?logo=lottie&logoColor=white)
+![Typed.js](https://img.shields.io/badge/Text_Animations-Typed.js-FF4088?logo=javascript&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🌓 Dark/Light mode support
+- 📱 Fully responsive design
+- ⚡ Fast loading and optimized performance
+- 🎨 Modern UI with smooth animations
+- 💻 Interactive project showcase
+- 🎯 Skills visualization
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React - Frontend library
+- Vite - Build tool and development server
+- TailwindCSS - Utility-first CSS framework
+- Lucide React - Icons
+- Lottie - Animations
+- Typed.js - Text animations
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/Bitxo92/web_portfolio.git
+```
+
+2. Install dependencies
+
+```bash
+cd web_portfolio
+npm install
+```
+
+3. Start the development server
+
+```bash
+npm run dev
+```
+
+4. Build for production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/         # React components
+├── assets/            # Static assets
+├── lib/               # Utility functions
+└── pages/             # Page components
+```
+
+## Customization
+
+1. Update personal information in respective components
+2. Modify color scheme in `tailwind.config.js`
+3. Add/remove projects in `ProjectSection.jsx`
+4. Update skills in `SkillsSection.jsx`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alejandro-m-pati%C3%B1o-garcia-41b000309/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexpatino1992@gmail.com)
