@@ -16,7 +16,7 @@ export const ContactInfo = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 py-12 px-4 sm:py-20 sm:px-6 bg-background text-foreground flex flex-col items-center gap-6 sm:gap-8"
+      className="scroll-mt-16 py-12 px-4 sm:py-20 sm:px-6 bg-background text-foreground flex flex-col items-center gap-6 sm:gap-8"
     >
       {/* Header */}
       <h2 className="text-2xl sm:text-4xl font-bold text-center">
