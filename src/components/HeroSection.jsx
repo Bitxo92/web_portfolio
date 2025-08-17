@@ -63,7 +63,7 @@ export const HeroSection = () => {
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a
               href="#projects"
-              className="neon-button cosmic-button w-full sm:w-auto px-8 py-3"
+              className=" cosmic-button w-full sm:w-auto px-8 py-3 neon-button"
             >
               <span className="neon-white">View my Work</span>
             </a>

@@ -121,7 +121,7 @@ export const SkillsSection = () => {
         <div className="space-y-8 sm:space-y-12">
           {skillCategories.map((category, idx) => (
             <div key={idx}>
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 border-b border-primary/40 pb-2">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 border-b border-primary/40 pb-2 neon-white">
                 {category.title}
               </h3>
 

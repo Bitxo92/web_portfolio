@@ -9,7 +9,7 @@ export const AboutMe = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div className="space-y-4 md:space-y-6">
-            <h3 className="text-xl md:text-2xl font-semibold">
+            <h3 className="text-xl md:text-2xl font-semibold neon-white">
               Passionate Mobile & Web developer
             </h3>
             <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
@@ -34,7 +34,7 @@ export const AboutMe = () => {
               <a
                 href="/CV_Programador_AlejandroPatinoGarcia.pdf"
                 target="_blank"
-                className=" px-4 md:px-6 py-2 rounded-md border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center text-sm md:text-base w-full sm:w-auto neon-button"
+                className=" px-4 md:px-6 py-2 rounded-md border border-primary text-primary  text-center text-sm md:text-base w-full sm:w-auto hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 duration-300 active:scale-95 neon-button"
               >
                 <span className="neon-white">Download CV</span>
               </a>
@@ -48,7 +48,7 @@ export const AboutMe = () => {
                   <Code className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-base md:text-lg mb-2">
+                  <h4 className="font-semibold text-base md:text-lg mb-2 neon-linkedin">
                     Web & Mobile App Development
                   </h4>
                   <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
@@ -65,11 +65,11 @@ export const AboutMe = () => {
 
             <div className="neon-card gradient-border p-4 md:p-6 card-hover">
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
-                  <User className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0 ">
+                  <User className="h-5 w-5 md:h-6 md:w-6 text-primary " />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-base md:text-lg mb-2">
+                  <h4 className="font-semibold text-base md:text-lg mb-2  neon-linkedin">
                     UI/UX Design
                   </h4>
                   <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
@@ -88,7 +88,7 @@ export const AboutMe = () => {
                   <Briefcase className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-base md:text-lg mb-2">
+                  <h4 className="font-semibold text-base md:text-lg mb-2 neon-linkedin">
                     Project Management
                   </h4>
                   <p className="text-sm md:text-base text-muted-foreground font-[VT323]">
