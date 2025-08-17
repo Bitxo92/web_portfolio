@@ -69,10 +69,10 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        {/* Avatar with Animated Gradient Border */}
+        {/* Avatar with Animated Border */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative size-72 sm:size-80 md:size-96">
-            <div className="absolute inset-0 rounded-full animate-spin-slow bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 dark:shadow-[0_0_20px_rgba(236,72,153,0.5)]" />
+            <div className="animate-spin-slow" />
             <div className="absolute inset-[3px] rounded-full bg-background" />
             <img
               src="/avatar.png"

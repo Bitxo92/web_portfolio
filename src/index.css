@@ -348,7 +348,7 @@
   }
 
   .dark .avatar-glow {
-    animation: rgb-glow 3s ease-in-out infinite alternate;
+    animation: rgb-glow 3s ease-in-out infinite;
   }
 
   @keyframes spin-slow {
@@ -361,7 +361,9 @@
   }
 
   .animate-spin-slow {
-    animation: spin-slow 8s linear infinite;
+    @apply absolute inset-0 rounded-full;
+    background: hsl(var(--foreground) / 0.2); /* Light mode border color */
+    border-width: 2px;
   }
 
   .dark .animate-spin-slow {
@@ -373,17 +375,17 @@
       /* Purple */ rgba(34, 211, 238, 1) /* Cyan */
     );
     opacity: 1;
-    border-width: 8px; /* Increased border width */
+    border-width: 8px;
   }
 
   .dark .animate-spin-slow::before {
     content: "";
     position: absolute;
-    inset: -8px; /* Increased inset to match border width */
+    inset: -8px;
     background: inherit;
     border-radius: inherit;
-    filter: blur(12px); /* Increased blur for wider glow */
-    opacity: 0.8; /* Increased opacity */
+    filter: blur(12px);
+    opacity: 0.8;
     z-index: -1;
   }
 }
