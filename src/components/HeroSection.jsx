@@ -69,16 +69,17 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-
-        {/* Animation Container */}
-        <div className="w-full lg:w-1/2 max-w-[400px] lg:max-w-[500px] mx-auto">
-          <Lottie
-            animationData={null}
-            path={animationURL}
-            loop
-            autoplay
-            className="w-full h-full"
-          />
+        {/* Avatar with Animated Gradient Border */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="relative size-72 sm:size-80 md:size-96">
+            <div className="absolute inset-0 rounded-full animate-spin-slow bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 dark:shadow-[0_0_20px_rgba(236,72,153,0.5)]" />
+            <div className="absolute inset-[3px] rounded-full bg-background" />
+            <img
+              src="/avatar.png"
+              alt="Programmer Avatar"
+              className="absolute inset-[3px] w-full h-full object-cover rounded-full bg-white dark:bg-black"
+            />
+          </div>
         </div>
       </div>
 
