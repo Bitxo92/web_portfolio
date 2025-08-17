@@ -1,7 +1,16 @@
 # Dev Portfolio Website
 
 A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean design, smooth animations, and interactive components.
-<img width="1899" height="905" alt="image" src="https://github.com/user-attachments/assets/7c2b44b8-9656-40ab-9f24-d42bd7fbd93c" />
+
+
+
+<img width="1899" height="903" alt="image" src="https://github.com/user-attachments/assets/a28390e8-00cc-4987-a2b9-b4ece43bd087" />
+
+
+
+<img width="1902" height="903" alt="image" src="https://github.com/user-attachments/assets/5a7acd0e-7ce2-4f30-bfec-942d716beba5" />
+
+
 
 
 ![React](https://img.shields.io/badge/Built_with-React-61DAFB?logo=react&logoColor=white)
