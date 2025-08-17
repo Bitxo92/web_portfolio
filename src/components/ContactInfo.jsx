@@ -20,14 +20,15 @@ export const ContactInfo = () => {
     >
       {/* Header */}
       <h2 className="text-2xl sm:text-4xl font-bold text-center">
-        Lets <span className="text-primary">Connect</span>
+        <span className="neon-white"> Lets</span>{" "}
+        <span className="text-primary neon-purple">Connect</span>
       </h2>
 
       {/* Description text */}
       <p className="max-w-xl text-center text-base sm:text-lg leading-relaxed font-[VT323]">
         Feel free to reach out via{" "}
         <a href="mailto:alexpatino1992@gmail.com">
-          <span className="text-primary">email</span>{" "}
+          <span className="text-primary neon-purple">email</span>{" "}
         </a>
         or connect with me on{" "}
         <a
@@ -35,7 +36,7 @@ export const ContactInfo = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="text-primary">Linkedin</span>
+          <span className="text-primary neon-purple">Linkedin</span>
         </a>{" "}
         and{" "}
         <a
@@ -43,7 +44,7 @@ export const ContactInfo = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="text-primary">GitHub</span>
+          <span className="text-primary neon-purple">GitHub</span>
         </a>{" "}
         . I'd love to hear from you!
       </p>
@@ -57,7 +58,7 @@ export const ContactInfo = () => {
       <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
         <a
           href="mailto:alexpatino1992@gmail.com"
-          className="transition-transform duration-300 hover:scale-110 hover:animate-shake"
+          className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-mail"
         >
           <Mail className="w-6 h-6 sm:w-8 sm:h-8" />
         </a>
@@ -66,16 +67,16 @@ export const ContactInfo = () => {
           href="https://www.linkedin.com/in/alejandro-m-pati%C3%B1o-garcia-41b000309/"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform duration-300 hover:scale-110 hover:animate-shake"
+          className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-linkedin"
         >
-          <Linkedin className="w-6 h-6 sm:w-8 sm:h-8" />
+          <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 " />
         </a>
 
         <a
           href="https://github.com/Bitxo92"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform duration-300 hover:scale-110 hover:animate-shake"
+          className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-github"
         >
           <Github className="w-6 h-6 sm:w-8 sm:h-8" />
         </a>

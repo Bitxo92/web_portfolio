@@ -114,7 +114,8 @@ export const SkillsSection = () => {
     >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+          <span className="neon-white">My</span>{" "}
+          <span className="text-primary neon-purple">Skills</span>
         </h2>
 
         <div className="space-y-8 sm:space-y-12">
@@ -128,7 +129,7 @@ export const SkillsSection = () => {
                 {category.skills.map((skill, key) => (
                   <div
                     key={key}
-                    className="bg-card p-4 sm:p-6 rounded-lg shadow-xs card-hover transition-transform duration-300 hover:scale-105"
+                    className="neon-card bg-card p-4 sm:p-6 rounded-lg shadow-xs card-hover transition-transform duration-300 hover:scale-105"
                   >
                     {/* Skill Name + Logo */}
                     <div className="flex items-center gap-2 sm:gap-3">

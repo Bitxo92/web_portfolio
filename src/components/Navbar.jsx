@@ -80,10 +80,10 @@ export const Navbar = () => {
             href="#hero"
           >
             <span className="relative z-10">
-              <span className="text-glow text-foreground font-[VT323]">
+              <span className="neon-white text-foreground font-[VT323]">
                 Developer
               </span>{" "}
-              PortFolio
+              <span className="neon-purple-flicker">PortFolio</span>
             </span>
           </a>
 
@@ -98,7 +98,7 @@ export const Navbar = () => {
                   className={cn(
                     "transition-colors duration-300",
                     isActive
-                      ? "text-primary font-semibold"
+                      ? "text-primary font-semibold neon-purple"
                       : "text-foreground/80 hover:text-primary"
                   )}
                 >
@@ -141,7 +141,7 @@ export const Navbar = () => {
                     className={cn(
                       "transition-colors duration-300",
                       isActive
-                        ? "text-primary font-semibold"
+                        ? "text-primary font-semibold neon-purple"
                         : "text-foreground/80 hover:text-primary"
                     )}
                     onClick={() => setIsMenuOpen(false)}

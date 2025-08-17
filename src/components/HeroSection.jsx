@@ -58,14 +58,14 @@ export const HeroSection = () => {
 
           <span
             ref={el}
-            className="inline-block text-base sm:text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-in-delay-3 min-h-[30px] font-[VT323]"
+            className="inline-block text-base sm:text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-in-delay-3 min-h-[30px] font-[VT323] dark:neon-white"
           ></span>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a
               href="#projects"
-              className="cosmic-button w-full sm:w-auto px-8 py-3"
+              className="neon-button cosmic-button w-full sm:w-auto px-8 py-3"
             >
-              View my Work
+              <span className="neon-white">View my Work</span>
             </a>
           </div>
         </div>

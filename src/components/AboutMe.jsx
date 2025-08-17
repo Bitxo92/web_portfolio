@@ -4,7 +4,8 @@ export const AboutMe = () => {
     <section id="about" className="scroll-mt-16 py-12 md:py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
-          About <span className="text-primary">Me</span>
+          <span className="neon-white">About</span>{" "}
+          <span className="text-primary neon-purple">Me</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div className="space-y-4 md:space-y-6">
@@ -26,22 +27,22 @@ export const AboutMe = () => {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-4 justify-center">
               <a
                 href="#contact"
-                className="cosmic-button text-center text-sm md:text-base w-full sm:w-auto"
+                className="cosmic-button text-center text-sm md:text-base w-full sm:w-auto neon-button"
               >
-                Contact
+                <span className="neon-white">Contact</span>
               </a>
               <a
                 href="/CV_Programador_AlejandroPatinoGarcia.pdf"
                 target="_blank"
-                className="px-4 md:px-6 py-2 rounded-md border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center text-sm md:text-base w-full sm:w-auto"
+                className=" px-4 md:px-6 py-2 rounded-md border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center text-sm md:text-base w-full sm:w-auto neon-button"
               >
-                Download CV
+                <span className="neon-white">Download CV</span>
               </a>
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:gap-6">
-            <div className="gradient-border p-4 md:p-6 card-hover">
+            <div className=" neon-card gradient-border p-4 md:p-6 card-hover">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
                   <Code className="h-5 w-5 md:h-6 md:w-6 text-primary" />
@@ -62,7 +63,7 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <div className="gradient-border p-4 md:p-6 card-hover">
+            <div className="neon-card gradient-border p-4 md:p-6 card-hover">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
                   <User className="h-5 w-5 md:h-6 md:w-6 text-primary" />
@@ -81,7 +82,7 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <div className="gradient-border p-4 md:p-6 card-hover">
+            <div className="neon-card gradient-border p-4 md:p-6 card-hover">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
                   <Briefcase className="h-5 w-5 md:h-6 md:w-6 text-primary" />

@@ -27,7 +27,8 @@ export const ProjectSection = () => {
     >
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center">
-          Featured <span className="text-primary">Projects</span>
+          <span className="neon-white">Featured</span>{" "}
+          <span className="text-primary neon-purple">Projects</span>
         </h2>
         <p className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4 font-[VT323]">
           Welcome to my projects showcase, where creativity meets functionality.
