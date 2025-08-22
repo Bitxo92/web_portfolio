@@ -81,9 +81,9 @@ export const Navbar = () => {
           >
             <span className="relative z-10">
               <span className="neon-white text-foreground font-[VT323]">
-                Developer
+                &lt; Developer
               </span>{" "}
-              <span className="neon-purple-flicker">PortFolio</span>
+              <span className="neon-purple-flicker">PortFolio /&gt;</span>
             </span>
           </a>
 
