@@ -1,5 +1,4 @@
-import { ArrowDown } from "lucide-react";
-import Lottie from "lottie-react";
+import { ChevronsDown } from "lucide-react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
@@ -88,7 +87,7 @@ export const HeroSection = () => {
         <span className="text-xs sm:text-sm text-muted-foreground mb-2 font-[VT323]">
           Scroll Down
         </span>
-        <ArrowDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+        <ChevronsDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary neon-purple" />
       </div>
     </section>
   );
