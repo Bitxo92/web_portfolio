@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ChevronsUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToHero = () => {
@@ -14,7 +14,7 @@ export default function Footer() {
           onClick={scrollToHero}
           className="p-3 bg-indigo-600 text-white rounded-md shadow-lg hover:bg-indigo-500 transition hover:cursor-pointer"
         >
-          <ArrowUp className="h-5 w-5" />
+          <ChevronsUp className="h-5 w-5" />
         </button>
       </div>
 
