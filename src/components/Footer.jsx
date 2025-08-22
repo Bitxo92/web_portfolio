@@ -20,24 +20,24 @@ export default function Footer() {
 
       {/* Footer Content */}
       <div className="container mx-auto px-4 flex flex-col gap-4 items-center text-center text-foreground opacity-50">
-        <p className="text-sm">
+        <p className="text-xs sm:text-sm md:text-base">
           &copy; {new Date().getFullYear()} Alejandro Patiño. All rights
           reserved.
         </p>
 
-        <div className="flex items-center gap-2 text-sm font-[VT323]">
+        <div className="flex items-center gap-2 text-xs md:text-sm font-[VT323]">
           <span>Powered by</span>
           <img
             src="https://cdn.svgporn.com/logos/react.svg"
             alt="React"
-            className="h-5 w-5"
+            className="size-4 md:size-5"
           />
 
           <span>&amp;</span>
           <img
             src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg"
             alt="Tailwind CSS"
-            className="h-5 w-5"
+            className="size-4 md:size-5"
           />
         </div>
       </div>
