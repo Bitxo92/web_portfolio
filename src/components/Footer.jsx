@@ -9,10 +9,10 @@ export default function Footer() {
   return (
     <footer className="relative bg-transparent text-gray-300 py-8 mt-16">
       {/* Floating Arrow */}
-      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50 ">
+      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 animate-bounce ">
         <button
           onClick={scrollToHero}
-          className="p-3 bg-indigo-600 text-white rounded-md shadow-lg hover:bg-indigo-500 transition hover:cursor-pointer"
+          className="p-3 bg-transparent text-primary rounded-md  neon-purple hover:cursor-pointer"
         >
           <ChevronsUp className="h-5 w-5" />
         </button>
