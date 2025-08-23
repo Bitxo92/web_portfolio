@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const techLogos = {
   Flutter: "https://cdn.svgporn.com/logos/flutter.svg",
@@ -12,7 +12,8 @@ const projects = [
   {
     id: 1,
     title: "DogWalkz",
-    description: "",
+    description:
+      "A mobile app built with Flutter and Supabase that helps dog owners find and connect with local dog walkers. Features include real-time location tracking, user profiles, and secure booking, making it easy to schedule walks and discover trusted walkers nearby.",
     image: "/projects/DogWalkz_Banner.svg",
     tags: ["Flutter", "Dart", "Supabase", "Firebase", "Stripe"],
     githubUrl: "https://github.com/Bitxo92/DogWalkz",
@@ -20,6 +21,20 @@ const projects = [
 ];
 
 export const ProjectSection = () => {
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleCard = (projectId) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [projectId]: !prev[projectId],
+    }));
+  };
+
+  const truncateText = (text, maxLength = 100) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength).trim() + "...";
+  };
+
   return (
     <section
       id="projects"
@@ -44,57 +59,77 @@ export const ProjectSection = () => {
               : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           }`}
         >
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="relative group bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto"
-            >
-              {/* Project Image Link */}
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block aspect-[16/9] overflow-hidden relative"
+          {projects.map((project) => {
+            const isExpanded = expandedCards[project.id];
+            const shouldShowReadMore = project.description.length > 100;
+
+            return (
+              <div
+                key={project.id}
+                className={`relative group bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto transition-all duration-300 ${
+                  isExpanded ? "max-h-none" : "max-h-fit"
+                }`}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 text-white pointer-events-none">
+                {/* Project Image Link */}
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block aspect-[16/9] overflow-hidden relative"
+                >
                   <img
-                    src="https://cdn.svgporn.com/logos/github-icon.svg"
-                    alt="GitHub"
-                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <span className="text-xs sm:text-sm font-medium select-none">
-                    Open on GitHub
-                  </span>
-                </div>
-              </a>
 
-              {/* Project Details */}
-              <div className="p-4 sm:p-5 md:p-6">
-                <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center mb-3 sm:mb-4">
-                  {project.tags.map((tag) =>
-                    techLogos[tag] ? (
-                      <img
-                        key={tag}
-                        src={techLogos[tag]}
-                        alt={tag}
-                        className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
-                        loading="lazy"
-                      />
-                    ) : null
+                  <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 text-white pointer-events-none">
+                    <img
+                      src="https://cdn.svgporn.com/logos/github-icon.svg"
+                      alt="GitHub"
+                      className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+                    />
+                    <span className="text-xs sm:text-sm font-medium select-none">
+                      Open on GitHub
+                    </span>
+                  </div>
+                </a>
+
+                {/* Project Details */}
+                <div className="p-4 sm:p-5 md:p-6">
+                  {/* Project Title */}
+                  <div className="mb-3">
+                    <h3 className="text-base sm:text-lg font-semibold text-left ml-2 neon-linkedin">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  {/* Project Description */}
+                  {project.description && (
+                    <div className="text-left ml-2">
+                      <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed font-[VT323]">
+                        {isExpanded
+                          ? project.description
+                          : truncateText(project.description)}
+                      </p>
+
+                      <div className="flex justify-end mt-2">
+                        {" "}
+                        {shouldShowReadMore && (
+                          <button
+                            onClick={() => toggleCard(project.id)}
+                            className="text-primary hover:text-primary/80 text-xs sm:text-sm md:text-baseont-medium mt-2 transition-colors duration-200 hover:cursor-pointer"
+                          >
+                            {isExpanded ? "Read less" : "Read more"}
+                          </button>
+                        )}
+                      </div>
+                    </div>
                   )}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-center">
-                  {project.title}
-                </h3>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
