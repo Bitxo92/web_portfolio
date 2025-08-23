@@ -26,7 +26,7 @@ const navItems = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ onThemeChange }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -106,7 +106,7 @@ export const Navbar = () => {
                 </a>
               );
             })}
-            <ThemeToggle className="ml-4" />
+            <ThemeToggle onThemeChange={onThemeChange} className="ml-4" />
           </div>
 
           {/* mobile nav */}
@@ -150,7 +150,7 @@ export const Navbar = () => {
                   </a>
                 );
               })}
-              <ThemeToggle />
+              <ThemeToggle onThemeChange={onThemeChange} />
             </div>
           </div>
         </div>

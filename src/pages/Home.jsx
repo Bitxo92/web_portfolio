@@ -5,170 +5,160 @@ import { SkillsSection } from "../components/SkillsSection";
 import { ProjectSection } from "../components/ProjectSection";
 import { ContactInfo } from "../components/ContactInfo";
 import Footer from "../components/Footer";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 export const Home = () => {
   const [init, setInit] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Initialize theme state immediately from localStorage to prevent initial flash
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "dark";
+  });
 
-  // Track theme changes
-  useEffect(() => {
-    const checkTheme = () => {
-      const isDark = document.documentElement.classList.contains("dark");
-      setIsDarkMode(isDark);
-      console.log("Theme changed to:", isDark ? "dark" : "light");
-    };
-
-    // Check initial theme
-    checkTheme();
-
-    // Create observer to watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const particlesContainerRef = useRef(null);
 
   // Initialize particles engine
   useEffect(() => {
-    console.log("Initializing particles engine...");
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
-      console.log("Particles engine initialized!");
       setInit(true);
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log("Particles loaded successfully:", container);
-    console.log("Container element:", container.canvas.element);
+  // Static particle options that don't depend on theme
+  const particleOptions = {
+    background: {
+      color: {
+        value: "transparent",
+      },
+    },
+    fpsLimit: 120,
+    interactivity: {
+      events: {
+        onClick: {
+          enable: false,
+        },
+        onHover: {
+          enable: false,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: "#a855f7", // Always purple, we'll handle color via CSS
+      },
+      links: {
+        color: "#a855f7",
+        distance: 120,
+        enable: true,
+        opacity: 0.3,
+        width: 1,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: {
+          default: "bounce",
+        },
+        random: true,
+        speed: 0.8,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+        },
+        value: 400,
+      },
+      opacity: {
+        value: 0.05,
+        random: {
+          enable: true,
+          minimumValue: 0.01,
+        },
+        animation: {
+          enable: true,
+          speed: 1,
+          minimumValue: 0.02,
+          sync: false,
+        },
+      },
+      shape: {
+        type: "polygon",
+        polygon: {
+          sides: 6,
+        },
+      },
+      size: {
+        value: { min: 1, max: 3 },
+        random: {
+          enable: true,
+          minimumValue: 0.5,
+        },
+        animation: {
+          enable: true,
+          speed: 2,
+          minimumValue: 0.5,
+          sync: false,
+        },
+      },
+    },
+    detectRetina: true,
   };
 
-  const options = useMemo(() => {
-    console.log(
-      "Creating particle options for theme:",
-      isDarkMode ? "dark" : "light"
-    );
+  const handleThemeChange = useCallback((isDark) => {
+    // Store current scroll position
+    const currentScroll = window.scrollY;
 
-    return {
-      background: {
-        color: {
-          value: "transparent",
-        },
-      },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: false, // Disable click interaction
-          },
-          onHover: {
-            enable: false, // Disable hover interaction
-          },
-        },
-      },
-      particles: {
-        color: {
-          value: isDarkMode ? "#a855f7" : "#64748b", // Purple for dark, gray for light
-        },
-        links: {
-          color: isDarkMode ? "#a855f7" : "#64748b",
-          distance: 120,
-          enable: true,
-          opacity: 0.3,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: true,
-          speed: 0.8,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 400,
-        },
-        opacity: {
-          value: 0.05,
-          random: {
-            enable: true,
-            minimumValue: 0.01,
-          },
-          animation: {
-            enable: true,
-            speed: 1,
-            minimumValue: 0.02,
-            sync: false,
-          },
-        },
-        shape: {
-          type: "polygon",
-          polygon: {
-            sides: 6,
-          },
-        },
-        size: {
-          value: { min: 1, max: 3 }, // Smaller particles
-          random: {
-            enable: true,
-            minimumValue: 0.5,
-          },
-          animation: {
-            enable: true,
-            speed: 2,
-            minimumValue: 0.5,
-            sync: false,
-          },
-        },
-      },
-      detectRetina: true,
-    };
-  }, [isDarkMode]);
+    setIsDarkMode(isDark);
+
+    // Restore scroll position immediately
+    window.scrollTo(0, currentScroll);
+
+    // Double-check scroll position after the next paint
+    requestAnimationFrame(() => {
+      window.scrollTo(0, currentScroll);
+    });
+  }, []);
+
+  const particlesLoaded = useCallback((container) => {
+    particlesContainerRef.current = container;
+  }, []);
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden relative">
-      {/* Particles Background */}
+      {/* Particles Background - Only render once */}
       {init && (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: -10,
-            pointerEvents: "none", // Disable mouse interaction
-          }}
-        />
+        <div
+          className={`fixed inset-0 -z-10 pointer-events-none transition-opacity duration-300 ${
+            isDarkMode ? "opacity-100" : "opacity-30"
+          }`}
+        >
+          <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={particleOptions}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </div>
       )}
 
-      {/* Custom background that works with particles */}
+      {/* Custom background */}
       <div
-        className="fixed inset-0 -z-20"
+        className="fixed inset-0 -z-20 transition-colors duration-300"
         style={{
-          background: isDarkMode
-            ? "#000000" // Pure black for dark mode
-            : "#FFFFFF",
+          backgroundColor: isDarkMode ? "#000000" : "#FFFFFF",
         }}
       />
 
       {/* Navbar */}
-      <Navbar />
+      <Navbar onThemeChange={handleThemeChange} />
 
       {/* Content */}
       <main className="relative z-10">
