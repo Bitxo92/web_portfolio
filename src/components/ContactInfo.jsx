@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Mail, Linkedin, Github } from "lucide-react";
-import Lottie from "lottie-react";
 
 export const ContactInfo = () => {
   const [animationData, setAnimationData] = useState(null);
@@ -49,9 +48,13 @@ export const ContactInfo = () => {
         . I'd love to hear from you!
       </p>
 
-      {/* Lottie Animation */}
-      <div className="w-40 h-40 sm:w-64 sm:h-64">
-        {animationData && <Lottie animationData={animationData} loop />}
+      {/* Avatar SVG */}
+      <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 flex justify-center items-center">
+        <img
+          src={"./avatar_laptop_dog.svg"}
+          alt="avatar"
+          className="w-full h-full object-contain"
+        />
       </div>
 
       {/* Icons Row */}
