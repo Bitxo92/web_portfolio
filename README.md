@@ -1,6 +1,13 @@
-# Dev Portfolio Website
+<p align="center">
+  <img src="./public/avatar_laptop_dog.svg" alt="Portfolio Hero" width="200" />
+</p>
 
-A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean design, smooth animations, and interactive components.
+<h1 align="center">Dev Portfolio Website</h1>
+
+<p align="center">
+  A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean responsive design, smooth animations, and interactive components.
+</p>
+
 
 
 
