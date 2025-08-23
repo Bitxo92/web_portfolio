@@ -32,7 +32,7 @@ export const AboutMe = () => {
                 <span className="neon-white">Contact</span>
               </a>
               <a
-                href="/CV_Programador_AlejandroPatinoGarcia.pdf"
+                href="/AlejandroPatino_SoftwareDeveloperCV.pdf"
                 target="_blank"
                 className=" px-4 md:px-6 py-2 rounded-md border border-primary text-primary  text-center text-sm md:text-base w-full sm:w-auto hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 duration-300 active:scale-95 neon-button"
               >
