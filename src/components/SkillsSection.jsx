@@ -4,37 +4,26 @@ const skillCategories = [
     skills: [
       {
         name: "HTML/CSS",
-        level: 95,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
       },
       {
         name: "JavaScript",
-        level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       },
       {
         name: "React",
-        level: 85,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
         name: "Tailwind",
-        level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
       {
         name: "Node.js",
-        level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       },
       {
-        name: "Express",
-        level: 90,
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      },
-      {
         name: "Django",
-        level: 80,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
       },
     ],
@@ -44,13 +33,19 @@ const skillCategories = [
     skills: [
       {
         name: "Flutter",
-        level: 80,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
       },
       {
         name: "Android Studio",
-        level: 75,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+      },
+      {
+        name: "Firebase",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg",
+      },
+      {
+        name: "Supabase",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
       },
     ],
   },
@@ -59,22 +54,18 @@ const skillCategories = [
     skills: [
       {
         name: "MongoDB",
-        level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
       },
       {
         name: "MySQL",
-        level: 85,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       },
       {
         name: "SQLite",
-        level: 80,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
       },
       {
         name: "PostgreSQL",
-        level: 80,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
       },
     ],
@@ -84,22 +75,18 @@ const skillCategories = [
     skills: [
       {
         name: "JavaScript",
-        level: 90,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       },
       {
         name: "Java",
-        level: 85,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
       },
       {
         name: "Python",
-        level: 80,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
       },
       {
         name: "Dart",
-        level: 75,
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
       },
     ],
@@ -125,24 +112,21 @@ export const SkillsSection = () => {
                 {category.title}
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10">
                 {category.skills.map((skill, key) => (
                   <div
                     key={key}
-                    className="neon-card bg-card p-4 sm:p-6 rounded-lg shadow-xs card-hover transition-transform duration-300 hover:scale-105"
+                    className="flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110 min-w-[80px] sm:min-w-[100px]"
                   >
-                    {/* Skill Name + Logo */}
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <img
-                        src={skill.logo}
-                        alt={skill.name}
-                        className="w-5 h-5 sm:w-6 sm:h-6"
-                        loading="lazy"
-                      />
-                      <h4 className="font-semibold text-base sm:text-lg font-[VT323]">
-                        {skill.name}
-                      </h4>
-                    </div>
+                    <img
+                      src={skill.logo}
+                      alt={skill.name}
+                      className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                      loading="lazy"
+                    />
+                    <span className="text-xs sm:text-sm md:text-base text-center font-[VT323] neon-white">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
