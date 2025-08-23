@@ -345,6 +345,13 @@
         /* stronger purple */ 0 0 90px rgba(34, 211, 238, 0.7); /* stronger cyan */
     }
   }
+  .dark .neon-border {
+    position: relative;
+    border-radius: 0.75rem;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 2px #a855f7, 0 0 10px #a855f7;
+    z-index: 0;
+  }
 
   .dark .avatar-glow {
     animation: rgb-glow 3s ease-in-out infinite;
