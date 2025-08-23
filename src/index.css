@@ -119,41 +119,76 @@
       text-shadow: none;
     }
   }
+  /* White neon glow for Developer title navbar */
+  .dark .neon-white-navbar {
+    display: inline-block;
+    color: #f8f8f8;
+    -webkit-text-fill-color: currentColor;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transform: translateZ(0);
 
+    /* Softer, tinted glow */
+    filter: drop-shadow(0 0 1.5px #f8f8f8) drop-shadow(0 0 3px #d1d5db)
+      drop-shadow(0 0 6px #9ca3af);
+  }
   /* White neon glow */
   .dark .neon-white {
     color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
   }
 
-  /* Purple neon glow */
   .dark .neon-purple {
-    color: #a855f7; /* Tailwind purple-500, tweak if needed */
+    color: #a855f7;
     text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 20px #a855f7,
       0 0 40px #a855f7;
   }
 
   /* Purple neon with flicker */
   .dark .neon-purple-flicker {
+    display: inline-block; /* prevents boxy paint */
     color: #a855f7;
-    text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 20px #a855f7,
-      0 0 40px #a855f7;
-    animation: neon-flicker 2.5s infinite;
+    -webkit-text-fill-color: currentColor;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transform: translateZ(0);
+    animation: neon-flicker-ios 2.5s infinite;
+  }
+
+  /* New flicker animation using drop-shadow */
+  @keyframes neon-flicker-ios {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      opacity: 1;
+      filter: drop-shadow(0 0 4px #a855f7) drop-shadow(0 0 8px #a855f7)
+        drop-shadow(0 0 16px #a855f7);
+    }
+    20%,
+    24%,
+    55% {
+      opacity: 0.6;
+      filter: none;
+    }
   }
   .dark .neon-card {
     position: relative;
-    border-radius: 0.75rem; /* rounded-xl */
-    border: 2px solid #a855f7; /* solid purple tube */
-    box-shadow: 0 0 2px #a855f7, 0 0 5px #a855f7; /* lighter normal glow */
-    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 2px #a855f7, 0 0 5px #a855f7;
     z-index: 0;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
   .dark .neon-card:hover {
     box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 20px #a855f7,
-      0 0 40px #a855f7; /* full neon glow */
-    transform: scale(1.03); /* optional subtle zoom */
+      0 0 40px #a855f7;
+    transform: scale(1.03);
   }
 
   .dark .typed-cursor {

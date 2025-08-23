@@ -80,7 +80,7 @@ export const Navbar = () => {
             href="#hero"
           >
             <span className="relative z-10">
-              <span className="neon-white text-foreground font-[VT323]">
+              <span className="neon-white-navbar text-foreground font-[VT323]">
                 &lt; Developer
               </span>{" "}
               <span className="neon-purple-flicker">PortFolio /&gt;</span>
