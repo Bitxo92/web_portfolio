@@ -42,7 +42,7 @@ export const AboutMe = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:gap-6">
-            <div className=" neon-card gradient-border p-4 md:p-6 card-hover">
+            <div className=" neon-card gradient-border p-4 md:p-6 card-hover shadow-sm">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
                   <Code className="h-5 w-5 md:h-6 md:w-6 text-primary" />
@@ -63,7 +63,7 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <div className="neon-card gradient-border p-4 md:p-6 card-hover">
+            <div className="neon-card gradient-border p-4 md:p-6 card-hover shadow-sm">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0 ">
                   <User className="h-5 w-5 md:h-6 md:w-6 text-primary " />
@@ -82,7 +82,7 @@ export const AboutMe = () => {
               </div>
             </div>
 
-            <div className="neon-card gradient-border p-4 md:p-6 card-hover">
+            <div className="neon-card gradient-border p-4 md:p-6 card-hover shadow-sm">
               <div className="flex items-start gap-3 md:gap-4">
                 <div className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0">
                   <Briefcase className="h-5 w-5 md:h-6 md:w-6 text-primary" />
