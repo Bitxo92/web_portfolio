@@ -1,24 +1,29 @@
-# Dev Portfolio Website
+<p align="center">
+  <img src="./public/avatar_laptop_dog.svg" alt="Portfolio Hero" width="200" />
+</p>
 
-A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean design, smooth animations, and interactive components.
+<h1 align="center">Dev Portfolio Website</h1>
 
-
-
-<img width="1899" height="903" alt="image" src="https://github.com/user-attachments/assets/a28390e8-00cc-4987-a2b9-b4ece43bd087" />
-
-
-
-<img width="1902" height="903" alt="image" src="https://github.com/user-attachments/assets/5a7acd0e-7ce2-4f30-bfec-942d716beba5" />
+<p align="center">
+  A modern, responsive portfolio website built with React, Vite, and TailwindCSS. Features a clean responsive design, smooth animations, and interactive components.
+</p>
 
 
+
+
+<img width="1902" height="903" alt="image" src="https://github.com/user-attachments/assets/a98ea161-41c8-4cff-a4aa-ac1b9b6dc6b1" />
+
+
+
+
+## About
+
+This open-source developer portfolio template provides a fully functional foundation for building modern, responsive, and visually appealing personal websites. Built with **Vite**, **React**, and **TailwindCSS**, it combines fast development workflows, modular components, and a utility-first styling approach, making it easy to customize and extend. The template includes interactive features such as **tsParticles** for dynamic particle backgrounds, **Typed.js** for animated typewriter-style text effects, and optional **Lottie animations** for smooth vector-based motion, creating an engaging user experience. Pre-configured sections include project showcases, skills visualization, and contact links, along with dark/light mode support. This project serves both as a learning resource for developers exploring modern frontend technologies and as a production-ready foundation for quickly deploying a professional portfolio, demonstrating best practices in structure, responsiveness, and interactive design.
 
 
 ![React](https://img.shields.io/badge/Built_with-React-61DAFB?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Built_with-Vite-646CFF?logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Styled_with-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)
-![Lucide React](https://img.shields.io/badge/Icons-Lucide_React-0A0A0A?logo=lucide&logoColor=white)
-![Lottie](https://img.shields.io/badge/Animations-Lottie-00DDB3?logo=lottie&logoColor=white)
-![Typed.js](https://img.shields.io/badge/Text_Animations-Typed.js-FF4088?logo=javascript&logoColor=white)
 
 ## Features
 
@@ -35,15 +40,15 @@ A modern, responsive portfolio website built with React, Vite, and TailwindCSS. 
 - Vite - Build tool and development server
 - TailwindCSS - Utility-first CSS framework
 - Lucide React - Icons
-- Lottie - Animations
 - Typed.js - Text animations
+- TsParticles - Animated Backgrounds
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- 👉 [Download Node.js here](https://nodejs.org/) (v14 or higher)  
+- 📦 npm or yarn
 
 ### Installation
 
