@@ -311,7 +311,11 @@
 
   .gradient-border {
     @apply relative rounded-md;
-    background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+    background: linear-gradient(
+      to right,
+      hsl(var(--card) / 0.5),
+      hsl(var(--card) / 0.5)
+    );
     border: 1px solid transparent;
   }
 
