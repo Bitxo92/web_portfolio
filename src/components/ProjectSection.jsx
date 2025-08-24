@@ -15,7 +15,7 @@ const projects = [
     description:
       "A mobile app built with Flutter and Supabase that helps dog owners find and connect with local dog walkers. Features include real-time location tracking, user profiles, and secure booking, making it easy to schedule walks and discover trusted walkers nearby.",
     image: "/projects/DogWalkz_Banner.svg",
-    tags: ["Flutter", "Dart", "Supabase", "Firebase", "Stripe"],
+    tags: ["Flutter", "Supabase", "Firebase", "Stripe"],
     githubUrl: "https://github.com/Bitxo92/DogWalkz",
   },
 ];
@@ -97,11 +97,26 @@ export const ProjectSection = () => {
 
                 {/* Project Details */}
                 <div className="p-4 sm:p-5 md:p-6">
-                  {/* Project Title */}
-                  <div className="mb-3">
-                    <h3 className="text-base sm:text-lg font-semibold text-left ml-2 neon-linkedin">
+                  {/* Project Title + Logos */}
+                  <div className="flex items-center justify-between mb-3 ml-2">
+                    <h3 className="text-base sm:text-lg font-semibold neon-linkedin">
                       {project.title}
                     </h3>
+
+                    <div className="flex items-center gap-2">
+                      {project.tags.map(
+                        (tag) =>
+                          techLogos[tag] && (
+                            <img
+                              key={tag}
+                              src={techLogos[tag]}
+                              alt={tag}
+                              title={tag}
+                              className="w-4 h-4 sm:w-5 sm:h-5 object-contain opacity-80 hover:opacity-100 transition"
+                            />
+                          )
+                      )}
+                    </div>
                   </div>
 
                   {/* Project Description */}
