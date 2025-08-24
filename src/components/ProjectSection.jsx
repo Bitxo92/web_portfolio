@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const techLogos = {
-  Flutter: "./src/assets/flutter.svg",
-  Supabase: "./src/assets/supabase-icon.svg",
+  Flutter: "./svgs/flutter.svg",
+  Supabase: "./svgs/supabase-icon.svg",
 };
 
 const projects = [
