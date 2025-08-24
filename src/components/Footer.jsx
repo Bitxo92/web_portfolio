@@ -32,8 +32,8 @@ export default function Footer() {
             alt="React"
             className="size-4 md:size-5"
           />
+          <img src="./vite.svg" alt="Vite" className="size-4 md:size-5" />
 
-          <span>&amp;</span>
           <img
             src="https://cdn.svgporn.com/logos/tailwindcss-icon.svg"
             alt="Tailwind CSS"
