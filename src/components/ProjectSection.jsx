@@ -66,7 +66,7 @@ export const ProjectSection = () => {
             return (
               <div
                 key={project.id}
-                className={`relative group neon-border bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto transition-all duration-300 ${
+                className={`relative group gradient-border neon-border bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto transition-all duration-300 ${
                   isExpanded ? "max-h-none" : "max-h-fit"
                 }`}
               >
