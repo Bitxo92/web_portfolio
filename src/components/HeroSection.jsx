@@ -46,10 +46,10 @@ export const HeroSection = () => {
             </span>{" "}
             <br />
             <span className="inline-flex flex-wrap">
-              <span className="text-primary opacity-0 animate-fade-in-delay-1 inline-block font-[VT323]">
+              <span className="text-primary opacity-0 animate-fade-in-delay-1 inline-block neon-purple">
                 Alejandro
               </span>
-              <span className="text-gradient opacity-0 animate-fade-in-delay-2 inline-block ml-2 font-[VT323] ">
+              <span className="text-gradient opacity-0 animate-fade-in-delay-2 inline-block ml-2 neon-white">
                 Patiño
               </span>
             </span>
