@@ -131,6 +131,15 @@ export const Navbar = ({ onThemeChange }) => {
 
           {/* Menu content */}
           <div className="relative h-full flex flex-col items-center justify-center">
+            {/* Close button (top-right) */}
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-4 right-4 p-2 text-foreground"
+              aria-label="Close Menu"
+            >
+              <X size={28} />
+            </button>
+
             <div className="flex flex-col items-center space-y-8 text-xl">
               {navItems.map((item, key) => {
                 const isActive = activeSection === item.href.slice(1);
