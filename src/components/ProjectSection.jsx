@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const techLogos = {
   Flutter: "./svgs/flutter.svg",
@@ -32,22 +33,36 @@ export const ProjectSection = () => {
     return text.slice(0, maxLength).trim() + "...";
   };
 
+  const smoothEase = [0.25, 0.1, 0.25, 1];
+
   return (
     <section
       id="projects"
       className="scroll-mt-16 py-12 sm:py-16 md:py-24 px-4 relative"
     >
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center">
+        <motion.h2
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: smoothEase }}
+          viewport={{ once: true }}
+        >
           <span className="neon-white">Featured</span>{" "}
           <span className="text-primary neon-purple">Projects</span>
-        </h2>
-        <p className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4 font-[VT323]">
+        </motion.h2>
+        <motion.p
+          className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4 font-[VT323]"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: smoothEase, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Welcome to my projects showcase, where creativity meets functionality.
           Here you'll find a curated selection of my work, highlighting my
           skills. Each project reflects my commitment to quality, attention to
           detail, and innovative problem-solving.
-        </p>
+        </motion.p>
 
         <div
           className={`grid gap-6 sm:gap-8 md:gap-10 ${
@@ -61,11 +76,19 @@ export const ProjectSection = () => {
             const shouldShowReadMore = project.description.length > 100;
 
             return (
-              <div
+              <motion.div
                 key={project.id}
                 className={`relative group gradient-border neon-border bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto transition-all duration-300 ${
                   isExpanded ? "max-h-none" : "max-h-fit"
                 }`}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: smoothEase,
+                  delay: 0.2 + project.id * 0.4,
+                }}
+                viewport={{ once: true }}
               >
                 {/* Project Image Link */}
                 <a
@@ -139,7 +162,7 @@ export const ProjectSection = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
