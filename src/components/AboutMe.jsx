@@ -67,7 +67,7 @@ export const AboutMe = () => {
               <motion.a
                 href="#contact"
                 className="cosmic-button text-center text-sm md:text-base w-full sm:w-auto neon-button"
-                initial={{ opacity: 0, x: -60 }}
+                initial={{ opacity: 0, x: -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: smoothEase, delay: 0.8 }}
                 viewport={{ once: true }}
@@ -85,9 +85,9 @@ export const AboutMe = () => {
                 href="/AlejandroPatino_SoftwareDeveloperCV.pdf"
                 target="_blank"
                 className="px-4 md:px-6 py-2 rounded-md border border-primary text-primary text-center text-sm md:text-base w-full sm:w-auto hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] neon-button"
-                initial={{ opacity: 0, x: 60 }}
+                initial={{ opacity: 0, x: 120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: smoothEase, delay: 0.8 }}
+                transition={{ duration: 1.2, ease: smoothEase, delay: 0.8 }}
                 viewport={{ once: true }}
                 whileHover={{
                   scale: 1.05,
