@@ -19,7 +19,7 @@ export const ContactInfo = () => {
     >
       {/* Header */}
       <h2 className="text-2xl sm:text-4xl font-bold text-center">
-        <span className="neon-white"> Lets</span>{" "}
+        <span className="neon-white"> Let`s</span>{" "}
         <span className="text-primary neon-purple">Connect</span>
       </h2>
 
