@@ -107,8 +107,8 @@ export const SkillsSection = () => {
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: smoothEase }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: smoothEase }}
+          viewport={{ once: false }}
         >
           <span className="neon-white">My</span>{" "}
           <span className="text-primary neon-purple">Skills</span>
@@ -121,8 +121,12 @@ export const SkillsSection = () => {
                 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 border-b border-primary/40 pb-2 neon-white"
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, ease: smoothEase, delay: idx * 0.2 }}
-                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  ease: smoothEase,
+                  delay: idx * 0.2,
+                }}
+                viewport={{ once: false }}
               >
                 {category.title}
               </motion.h3>
@@ -141,11 +145,11 @@ export const SkillsSection = () => {
                       initial={{ opacity: 0, x: 80 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{
-                        duration: 1,
+                        duration: 0.5,
                         ease: smoothEase,
-                        delay: idx * 0.2 + key * 0.1,
+                        delay: idx * 0.2,
                       }}
-                      viewport={{ once: true }}
+                      viewport={{ once: false }}
                     />
                     <span className="text-xs sm:text-sm md:text-base text-center font-[VT323] neon-white">
                       {skill.name}
