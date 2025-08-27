@@ -13,8 +13,8 @@ export const AboutMe = () => {
           className="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-center"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: smoothEase }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: smoothEase }}
+          viewport={{ once: false }}
         >
           <span className="neon-white">About</span>{" "}
           <span className="text-primary neon-purple">Me</span>
@@ -26,10 +26,10 @@ export const AboutMe = () => {
             {/* Subtitle slides from left */}
             <motion.h3
               className="text-xl md:text-2xl font-semibold neon-white"
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: smoothEase, delay: 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.1 }}
+              viewport={{ once: false }}
             >
               Passionate Mobile & Web developer
             </motion.h3>
@@ -39,8 +39,8 @@ export const AboutMe = () => {
               className="text-sm md:text-base text-muted-foreground font-[VT323]"
               initial={{ opacity: 0, x: -80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: smoothEase, delay: 0.4 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+              viewport={{ once: false }}
             >
               I'm a full stack developer with a deep passion for crafting
               high-quality web and mobile applications. With expertise in both
@@ -52,8 +52,8 @@ export const AboutMe = () => {
               className="text-sm md:text-base text-muted-foreground font-[VT323]"
               initial={{ opacity: 0, x: -80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: smoothEase, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.3 }}
+              viewport={{ once: false }}
             >
               I thrive on solving complex problems and delivering seamless user
               experiences through intuitive design and robust functionality. My
@@ -67,10 +67,10 @@ export const AboutMe = () => {
               <motion.a
                 href="#contact"
                 className="cosmic-button text-center text-sm md:text-base w-full sm:w-auto neon-button"
-                initial={{ opacity: 0, x: -120 }}
+                initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: smoothEase, delay: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+                viewport={{ once: false }}
                 whileHover={{
                   scale: 1.05,
                   transition: { duration: 0.3, ease: smoothEase },
@@ -85,10 +85,10 @@ export const AboutMe = () => {
                 href="/AlejandroPatino_SoftwareDeveloperCV.pdf"
                 target="_blank"
                 className="px-4 md:px-6 py-2 rounded-md border border-primary text-primary text-center text-sm md:text-base w-full sm:w-auto hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] neon-button"
-                initial={{ opacity: 0, x: 120 }}
+                initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.2, ease: smoothEase, delay: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+                viewport={{ once: false }}
                 whileHover={{
                   scale: 1.05,
                   transition: { duration: 0.3, ease: smoothEase },
@@ -105,10 +105,10 @@ export const AboutMe = () => {
             {/* Card 1 */}
             <motion.div
               className="neon-card gradient-border p-4 md:p-6 card-hover shadow-sm"
-              initial={{ opacity: 0, x: 120 }}
+              initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: smoothEase, delay: 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+              viewport={{ once: false }}
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.3, ease: smoothEase },
@@ -119,8 +119,8 @@ export const AboutMe = () => {
                   className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0"
                   initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
                   whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
-                  transition={{ duration: 0.8, ease: smoothEase, delay: 1.0 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+                  viewport={{ once: false }}
                 >
                   <Code className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </motion.div>
@@ -129,8 +129,8 @@ export const AboutMe = () => {
                     className="font-semibold text-base md:text-lg mb-2 neon-linkedin"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.2 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+                    viewport={{ once: false }}
                   >
                     Web & Mobile App Development
                   </motion.h4>
@@ -138,8 +138,8 @@ export const AboutMe = () => {
                     className="text-sm md:text-base text-muted-foreground font-[VT323]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.3 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+                    viewport={{ once: false }}
                   >
                     I specialize in building responsive, high-performance web
                     and mobile applications using modern technologies like React
@@ -155,10 +155,10 @@ export const AboutMe = () => {
             {/* Card 2 */}
             <motion.div
               className="neon-card gradient-border p-4 md:p-6 card-hover shadow-sm"
-              initial={{ opacity: 0, x: 120 }}
+              initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: smoothEase, delay: 0.4 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+              viewport={{ once: false }}
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.3, ease: smoothEase },
@@ -169,8 +169,8 @@ export const AboutMe = () => {
                   className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0"
                   initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
                   whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
-                  transition={{ duration: 0.8, ease: smoothEase, delay: 1.2 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+                  viewport={{ once: false }}
                 >
                   <User className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </motion.div>
@@ -179,8 +179,8 @@ export const AboutMe = () => {
                     className="font-semibold text-base md:text-lg mb-2 neon-linkedin"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.4 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+                    viewport={{ once: false }}
                   >
                     UI/UX Design
                   </motion.h4>
@@ -188,8 +188,8 @@ export const AboutMe = () => {
                     className="text-sm md:text-base text-muted-foreground font-[VT323]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.5 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+                    viewport={{ once: false }}
                   >
                     Creating user-centered designs is key to my development
                     process. I focus on intuitive interfaces, accessibility, and
@@ -203,10 +203,10 @@ export const AboutMe = () => {
             {/* Card 3 */}
             <motion.div
               className="neon-card gradient-border p-4 md:p-6 card-hover shadow-sm"
-              initial={{ opacity: 0, x: 120 }}
+              initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.2, ease: smoothEase, delay: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: smoothEase, delay: 0.6 }}
+              viewport={{ once: false }}
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.3, ease: smoothEase },
@@ -217,8 +217,8 @@ export const AboutMe = () => {
                   className="p-2 md:p-3 rounded-full bg-primary/10 shrink-0"
                   initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
                   whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
-                  transition={{ duration: 0.8, ease: smoothEase, delay: 1.4 }}
-                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, ease: smoothEase, delay: 0.6 }}
+                  viewport={{ once: false }}
                 >
                   <Briefcase className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </motion.div>
@@ -227,8 +227,8 @@ export const AboutMe = () => {
                     className="font-semibold text-base md:text-lg mb-2 neon-linkedin"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.6 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.6 }}
+                    viewport={{ once: false }}
                   >
                     Project Management
                   </motion.h4>
@@ -236,8 +236,8 @@ export const AboutMe = () => {
                     className="text-sm md:text-base text-muted-foreground font-[VT323]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: smoothEase, delay: 1.7 }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.6 }}
+                    viewport={{ once: false }}
                   >
                     With experience managing projects from conception to
                     deployment, I ensure deadlines are met and teams collaborate

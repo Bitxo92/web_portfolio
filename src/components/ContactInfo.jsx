@@ -24,8 +24,8 @@ export const ContactInfo = () => {
         className="text-2xl sm:text-4xl font-bold text-center"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: smoothEase }}
-        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: smoothEase }}
+        viewport={{ once: false }}
       >
         <span className="neon-white"> Let`s</span>{" "}
         <span className="text-primary neon-purple">Connect</span>
@@ -34,10 +34,10 @@ export const ContactInfo = () => {
       {/* Description text */}
       <motion.p
         className="max-w-xl text-center text-base sm:text-lg leading-relaxed font-[VT323]"
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: smoothEase, delay: 0.4 }}
-        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+        viewport={{ once: false }}
       >
         Feel free to reach out via{" "}
         <a href="mailto:alexpatino1992@gmail.com">
@@ -70,8 +70,8 @@ export const ContactInfo = () => {
           className="w-full h-full object-contain"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: smoothEase, delay: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: smoothEase, delay: 0.4 }}
+          viewport={{ once: false }}
         />
       </div>
 
@@ -83,11 +83,11 @@ export const ContactInfo = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.5,
             ease: smoothEase,
-            delay: 0.8,
+            delay: 0.6,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Mail className="w-6 h-6 sm:w-8 sm:h-8" />
         </motion.a>
@@ -100,11 +100,11 @@ export const ContactInfo = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.5,
             ease: smoothEase,
-            delay: 1,
+            delay: 0.8,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 " />
         </motion.a>
@@ -117,11 +117,11 @@ export const ContactInfo = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: 1,
+            duration: 0.5,
             ease: smoothEase,
-            delay: 1.2,
+            delay: 1,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Github className="w-6 h-6 sm:w-8 sm:h-8" />
         </motion.a>
