@@ -31,6 +31,7 @@ export const HeroSection = () => {
       typed.destroy();
     };
   }, []);
+  const smoothEase = [0.25, 0.1, 0.25, 1];
 
   return (
     <section
@@ -41,17 +42,34 @@ export const HeroSection = () => {
         {/* Text Content */}
         <div className="max-w-2xl w-full text-center lg:text-left space-y-4 lg:space-y-6 mt-8 lg:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in inline-block">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: smoothEase }}
+              viewport={{ once: false }}
+            >
               Hi, I&apos;m{" "}
-            </span>{" "}
+            </motion.span>{" "}
             <br />
             <span className="inline-flex flex-wrap">
-              <span className="text-primary opacity-0 animate-fade-in-delay-1 inline-block neon-purple">
+              <motion.span
+                className="text-primary neon-purple"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+                viewport={{ once: false }}
+              >
                 Alejandro
-              </span>
-              <span className="text-gradient opacity-0 animate-fade-in-delay-2 inline-block ml-2 neon-white">
+              </motion.span>
+              <motion.span
+                className="text-gradient ml-2 neon-white"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+                viewport={{ once: false }}
+              >
                 Patiño
-              </span>
+              </motion.span>
             </span>
           </h1>
 
