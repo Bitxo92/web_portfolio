@@ -36,7 +36,7 @@ export const ContactInfo = () => {
         className="max-w-xl text-center text-base sm:text-lg leading-relaxed font-[VT323]"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: smoothEase, delay: 0.2 }}
+        transition={{ duration: 1, ease: smoothEase, delay: 0.4 }}
         viewport={{ once: true }}
       >
         Feel free to reach out via{" "}
@@ -64,39 +64,67 @@ export const ContactInfo = () => {
 
       {/* Avatar SVG */}
       <div className="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 flex justify-center items-center">
-        <img
+        <motion.img
           src={"./avatar_laptop_dog.svg"}
           alt="avatar"
           className="w-full h-full object-contain"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: smoothEase, delay: 0.8 }}
+          viewport={{ once: true }}
         />
       </div>
 
       {/* Icons Row */}
       <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
-        <a
+        <motion.a
           href="mailto:alexpatino1992@gmail.com"
           className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-mail"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: smoothEase,
+            delay: 0.8,
+          }}
+          viewport={{ once: true }}
         >
           <Mail className="w-6 h-6 sm:w-8 sm:h-8" />
-        </a>
+        </motion.a>
 
-        <a
+        <motion.a
           href="https://www.linkedin.com/in/alejandro-m-pati%C3%B1o-garcia-41b000309/"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-linkedin"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: smoothEase,
+            delay: 1,
+          }}
+          viewport={{ once: true }}
         >
           <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 " />
-        </a>
+        </motion.a>
 
-        <a
+        <motion.a
           href="https://github.com/Bitxo92"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform duration-300 hover:scale-110 hover:animate-shake neon-github"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: smoothEase,
+            delay: 1.2,
+          }}
+          viewport={{ once: true }}
         >
           <Github className="w-6 h-6 sm:w-8 sm:h-8" />
-        </a>
+        </motion.a>
       </div>
     </section>
   );
