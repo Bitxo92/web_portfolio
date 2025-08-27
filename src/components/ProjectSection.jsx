@@ -45,8 +45,8 @@ export const ProjectSection = () => {
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: smoothEase }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: smoothEase }}
+          viewport={{ once: false }}
         >
           <span className="neon-white">Featured</span>{" "}
           <span className="text-primary neon-purple">Projects</span>
@@ -55,8 +55,8 @@ export const ProjectSection = () => {
           className="text-sm sm:text-base text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto px-2 sm:px-4 font-[VT323]"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, ease: smoothEase, delay: 0.2 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: smoothEase, delay: 0.2 }}
+          viewport={{ once: false }}
         >
           Welcome to my projects showcase, where creativity meets functionality.
           Here you'll find a curated selection of my work, highlighting my
@@ -84,11 +84,11 @@ export const ProjectSection = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
-                  duration: 1,
+                  duration: 0.5,
                   ease: smoothEase,
-                  delay: 0.2 + project.id * 0.4,
+                  delay: project.id * 0.4,
                 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 {/* Project Image Link */}
                 <a
