@@ -159,18 +159,29 @@ export const Home = () => {
 
       {/* Navbar */}
       <Navbar onThemeChange={handleThemeChange} />
+      <div className="snap-y snap-mandatory overflow-y-scroll h-screen">
+        {/* Content */}
+        <main className="relative z-10">
+          <div className=" snap-center">
+            <HeroSection />
+          </div>
+          <div className=" snap-start pt-16">
+            <AboutMe />
+          </div>
+          <div className=" snap-start pt-16">
+            <SkillsSection />
+          </div>
+          <div className=" snap-start pt-16">
+            <ProjectSection />
+          </div>
+          <div className=" snap-start pt-16">
+            <ContactInfo />
+          </div>
+          <div className="h-30"></div>
+        </main>
 
-      {/* Content */}
-      <main className="relative z-10">
-        <HeroSection />
-        <AboutMe />
-        <SkillsSection />
-        <ProjectSection />
-        <ContactInfo />
-        <div className="h-30"></div>
-      </main>
-
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 };
