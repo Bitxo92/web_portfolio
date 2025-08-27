@@ -81,8 +81,8 @@ export const ProjectSection = () => {
                 className={`relative group gradient-border neon-border bg-card rounded-lg shadow-lg overflow-hidden w-full max-w-[340px] sm:max-w-md mx-auto transition-all duration-300 ${
                   isExpanded ? "max-h-none" : "max-h-fit"
                 }`}
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{
                   duration: 1,
                   ease: smoothEase,
