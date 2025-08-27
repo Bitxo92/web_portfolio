@@ -1,7 +1,7 @@
 import { ChevronsDown } from "lucide-react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
-
+import { motion } from "framer-motion";
 export const HeroSection = () => {
   const animationURL =
     "https://lottie.host/10267007-a44d-4c3e-9fe9-06a66bdb4b39/zDwJJd3QII.json";
@@ -68,15 +68,24 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        {/* Avatar with Animated Border */}
+        {/* Avatar with Animated Border + Levitation */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative size-72 sm:size-80 md:size-96">
             <div className="animate-spin-slow" />
             <div className="absolute inset-[3px] rounded-full bg-background" />
-            <img
+            <motion.img
               src="/avatar.png"
               alt="Programmer Avatar"
               className="absolute inset-[3px] w-full h-full object-cover rounded-full bg-white dark:bg-black"
+              animate={{
+                y: [0, -10, 0],
+                scale: [1, 1.01, 1],
+              }}
+              transition={{
+                duration: 3,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
             />
           </div>
         </div>
