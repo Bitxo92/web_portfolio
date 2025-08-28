@@ -130,7 +130,7 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden relative">
-      {/* Particles Background - Only render once */}
+      {/* Particles Background */}
       {init && (
         <div
           className={`fixed inset-0 -z-10 pointer-events-none transition-opacity duration-300 ${
@@ -165,21 +165,19 @@ export const Home = () => {
           <div className=" snap-center">
             <HeroSection />
           </div>
-          <div className=" snap-start pt-16">
+          <div className=" snap-start pt-8 mt-30">
             <AboutMe />
           </div>
-          <div className=" snap-start pt-16">
+          <div className=" snap-start pt-8 mt-30">
             <SkillsSection />
           </div>
-          <div className=" snap-start pt-16">
+          <div className=" snap-start pt-8 mt-30">
             <ProjectSection />
           </div>
-          <div className=" snap-start pt-16">
+          <div className=" snap-start pt-8 mt-30">
             <ContactInfo />
           </div>
-          <div className="h-30"></div>
         </main>
-
         <Footer />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { cn } from "../lib/utils";
 import { X, Menu } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
@@ -33,36 +33,59 @@ export const Navbar = ({ onThemeChange }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY;
+      const scrollContainer = document.querySelector(".snap-y");
+      if (!scrollContainer) return;
 
+      const scrollPos = scrollContainer.scrollTop;
+
+      // Update scroll state for blur effect
       setIsScrolled(scrollPos > 10);
 
-      // Determine which section is active
-      let currentSection = "hero";
+      const sections = navItems
+        .map((item) => ({
+          id: item.href.slice(1),
+          element: document.getElementById(item.href.slice(1)),
+        }))
+        .filter((section) => section.element);
 
-      for (const item of navItems) {
-        const section = document.querySelector(item.href);
-        if (section) {
-          const top = section.offsetTop;
-          const height = section.offsetHeight;
-          if (scrollPos >= top - 100 && scrollPos < top + height - 100) {
-            currentSection = item.href.slice(1);
-            break;
-          }
+      let currentSection = "hero";
+      const viewportHeight = window.innerHeight;
+      const centerPoint = scrollPos + viewportHeight / 2;
+
+      for (const section of sections) {
+        const rect = section.element.getBoundingClientRect();
+        const elementTop = scrollPos + rect.top;
+        const elementBottom = elementTop + rect.height;
+
+        if (centerPoint >= elementTop && centerPoint <= elementBottom) {
+          currentSection = section.id;
+          break;
         }
       }
+
       setActiveSection(currentSection);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const scrollContainer = document.querySelector(".snap-y");
+    if (scrollContainer) {
+      scrollContainer.addEventListener("scroll", handleScroll, {
+        passive: true,
+      });
 
-    // Call on mount to set initial state
-    handleScroll();
+      handleScroll();
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
+
+  // Close mobile menu when clicking on nav items
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
