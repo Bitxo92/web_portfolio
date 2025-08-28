@@ -140,7 +140,7 @@ export const SkillsSection = () => {
                     <motion.img
                       src={skill.logo}
                       alt={skill.name}
-                      className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                      className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16"
                       loading="lazy"
                       initial={{ opacity: 0, x: 80 }}
                       whileInView={{ opacity: 1, x: 0 }}
