@@ -25,7 +25,7 @@ export default function Footer() {
           reserved.
         </p>
 
-        <div className="flex items-center gap-2 text-xs md:text-sm font-[VT323]">
+        <div className="flex items-center gap-2 text-xs md:text-sm">
           <span>Powered by</span>
           <img
             src="https://cdn.svgporn.com/logos/react.svg"
